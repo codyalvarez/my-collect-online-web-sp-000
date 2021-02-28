@@ -1,7 +1,9 @@
 def my_collect(collection)
-  # collection = []
-  while collection # is not capitalized
-    collection << yeild(collection.upcase)
+  i = 0
+  new_collection = []
+  while i < collection.length 
+    new_collection << yield(collection[i])
+    i += 1
   end
-  collection
+  new_collection
 end
